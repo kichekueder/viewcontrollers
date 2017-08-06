@@ -36,8 +36,16 @@ class MusicListVC: UIViewController {
         
         if let destination = segue.destination as? PlaySongVC {
             
+             // ^^^ only execute this block if there is a VC called PlaySongVC
+            
             if let song = sender as? String {
+                
+                // ^^^ only execute this block if a song title has been selected.
+                
                 destination.selectedSong = song
+                
+                // ^^^ set the private variable selectedSong on PlaySongVC to the value of song.
+                
             }
             
         }
