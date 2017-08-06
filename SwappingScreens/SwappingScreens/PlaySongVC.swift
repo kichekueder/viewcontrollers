@@ -12,12 +12,12 @@ class PlaySongVC: UIViewController {
     
     @IBOutlet weak var songTitleLbl: UILabel!
     
-    private var _selectedSong: String!
+    private var _selectedSong: String! // declare private variable
     
     var selectedSong: String {
-        get {
+        get { // getter collects selectedSong
             return _selectedSong
-        } set {
+        } set { // setter assigns new value to the selectedSong private variable
             _selectedSong = newValue
         }
     }
@@ -25,7 +25,7 @@ class PlaySongVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        songTitleLbl.text = _selectedSong
+        songTitleLbl.text = _selectedSong // changes the label text to the private variable
         
     }
     
